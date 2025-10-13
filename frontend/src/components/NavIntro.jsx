@@ -1,6 +1,6 @@
 import logoGreen from "../assets/logo-deise-matos-green.png"
 
-function NavIntro() {
+function NavIntro( {scheduleAppointmentRedirect} ) {
 
     return (
         <div id="nav-intro" className="nav-intro">
@@ -13,7 +13,7 @@ function NavIntro() {
                 <a href="#third-section" className="nav-menu-option"><ul>Serviços</ul></a>
                 <a href="#fourth-section" className="nav-menu-option"><ul>Depoimentos</ul></a>
             </li>
-            <button className="nav-button-schedule">
+            <button onClick={scheduleAppointmentRedirect} className="nav-button-schedule">
                 AGENDAR CONSULTA
             </button>
         </div>
