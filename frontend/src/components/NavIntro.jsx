@@ -11,7 +11,7 @@ function NavIntro( { onScheduleAppointmentRedirect } ) {
                 <a href="#first-section" className="nav-menu-option"><ul>Início</ul></a>
                 <a href="#second-section" className="nav-menu-option"><ul>Sobre</ul></a>
                 <a href="#third-section" className="nav-menu-option"><ul>Serviços</ul></a>
-                <a href="#fourth-section" className="nav-menu-option"><ul>Depoimentos</ul></a>
+                <a href="#fourth-section" className="nav-menu-option"><ul>Contato</ul></a>
             </li>
             <button onClick={onScheduleAppointmentRedirect} className="nav-button-schedule">
                 AGENDAR CONSULTA

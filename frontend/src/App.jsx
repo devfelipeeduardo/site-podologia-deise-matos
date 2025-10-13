@@ -1,8 +1,10 @@
 import Nav from "./components/Nav"
 import FirstSection from "./components/FirstSection"
 import SecondSection from "./components/SecondSection"
-import StatisticContainer from "./components/StatistiscContainer"
 import ThirdSection from "./components/ThirdSection"
+import FourthSection from "./components/FourthSection"
+import Footer from "./components/Footer"
+import StatisticContainer from "./components/StatistiscContainer"
 
 function App() {
 
@@ -21,6 +23,8 @@ function App() {
       <StatisticContainer />
       <SecondSection />
       <ThirdSection />
+      <FourthSection onScheduleAppointmentRedirect={onScheduleAppointmentRedirect}/>
+      <Footer />
     </>
   )
 }

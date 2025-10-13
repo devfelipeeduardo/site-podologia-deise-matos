@@ -1,27 +1,28 @@
-import fotoDeise from "../assets/foto-deise.png"
-import NavIntro from "./NavIntro";
+import addressIcon from "../assets/adress-icon.svg"
+import emailIcon from "../assets/email-icon.svg"
+import tellUsImage from "../assets/tell-us-image.png"
 
-function FirstSection( { onScheduleAppointmentRedirect }) {
+function FourthSection(
+    {onScheduleAppointmentRedirect }
+) {
 
     return (
-        <section id="first-section" className="first-section">
-            <NavIntro onScheduleAppointmentRedirect={onScheduleAppointmentRedirect} />
-            <div className="first-container">
-                <div className="intro">
-                    <h2 className="welcome-text">
-                        BOAS-VINDAS A CLÍNICA DE PODOLOGIA DEISE MATOS 👋
+        <section id="fourth-section" className="fourth-section">
+            <div className="fourth-container">
+                <div className="tell-us-container">
+                    <h2>
+                        Entre em contato
+                        <br />
+                        com a gente!
                     </h2>
-                    <h1>
-                        Podologia de Qualidade
-                        <br/>
-                        Simplificada para Todos
-                    </h1>
-                    <p className="intro-paragraph">
-                        A Clínica de Podologia Deise Matos vai além dos sintomas
-                        para tratar a causa raíz das doenças nos pés e proporcionar
-                        uma cura eficiente!
-                    </p>
-
+                    <div className="address-container">
+                        <img src={addressIcon} alt="Ícone de endereço" className="address-icon" />
+                        <span className="address-text" >R. Moacir Miguel da Silva, 61 - Jardim Bonfiglioli</span>
+                    </div>
+                    <div className="email-container">
+                        <img src={emailIcon} alt="Ícone de e-mail" className="email-icon" />
+                        <span className="email-text" >podologiadeisematos@gmail.com</span>
+                    </div>
                     <button onClick={onScheduleAppointmentRedirect} className="first-container-button-schedule">
                         <svg className="logo-whatsapp" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
                             <path fill="currentColor" />
@@ -30,12 +31,10 @@ function FirstSection( { onScheduleAppointmentRedirect }) {
                         <span className="schedule-text">AGENDE SUA CONSULTA</span>
                     </button>
                 </div>
-                <div className="image-container">
-                    <img src={fotoDeise} alt="" className="deise-image" />
-                </div>
+                <img className="tell-us-image" src={tellUsImage} alt="Imagem de uma cadeira da clínica" />
             </div>
         </section>
     )
 }
 
-export default FirstSection;
+export default FourthSection;
