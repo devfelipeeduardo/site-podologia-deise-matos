@@ -6,12 +6,12 @@ import ThirdSection from "./components/ThirdSection"
 
 function App() {
 
-  function ScheduleAppointmentRedirect() {window.location.href = "https://api.whatsapp.com/send/?phone=5511975126282&text&type=phone_number&app_absent=0"};
+  function onScheduleAppointmentRedirect() {window.location.href = "https://api.whatsapp.com/send/?phone=5511975126282&text&type=phone_number&app_absent=0"};
 
   return (
     <>
-      <Nav scheduleAppointmentRedirect=ScheduleAppointmentRedirect />
-      <FirstSection scheduleAppointmentRedirect=ScheduleAppointmentRedirect />
+      <Nav scheduleAppointmentRedirect={onScheduleAppointmentRedirect} />
+      <FirstSection scheduleAppointmentRedirect={onScheduleAppointmentRedirect} />
       <StatisticContainer />
       <SecondSection />
       <ThirdSection />
