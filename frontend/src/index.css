@@ -31,6 +31,7 @@
 }
 
 html {
+  user-select: none;
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
@@ -48,14 +49,22 @@ a {
 
 nav {
   position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 70px;
+  opacity: 0;
   background-color: var(--brand-green);
+  transition: opacity 500ms ease-in-out;
   z-index: 10000;
+}
+
+.nav-hidden {
+  opacity: 100;
 }
 
 nav .nav-logo {
@@ -112,7 +121,77 @@ nav .nav-button-schedule:hover {
   font-weight: 600;
 }
 
-/* First Container */
+/* Alerta de Gambiarra!*/
+/* NavIntro */
+
+.nav-intro {
+  position: absolute;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  background-color: transparent;
+  z-index: 10001;
+}
+
+.nav-intro .nav-logo {
+  width: auto;
+  height: 40px;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.nav-intro li.nav-menu {
+  display: flex;
+  width: 600px;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.nav-intro .nav-menu a {
+  width: 110px;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: normal;
+  color: var(--brand-green);
+  transition: all 200ms ease;
+}
+
+.nav-intro .nav-menu a:last-child {
+  margin-left: 40px;
+}
+
+
+.nav-intro .nav-menu a:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-intro .nav-button-schedule {
+  width: 200px;
+  height: 40px;
+  margin-right: 50px;
+  border: 1px solid var(--brand-green);
+  border-radius: 50px;
+  font-weight: bold;
+  background-color: transparent;
+  color: var(--brand-green);
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.nav-intro .nav-button-schedule:hover {
+  border: 1px solid transparent;
+  background-color: var(--brand-green)  ;
+  color: var(--brand-green-light);
+  font-weight: 600;
+}
+
+/* First Container - Intro*/
 
 section {
   width: 100%;
@@ -207,7 +286,7 @@ section.first-section {
 }
 
 
-/* Statistic Container*/
+/* Statistic Container - Estatísticas*/
 
 .statistic-container {
   display: grid;
@@ -218,8 +297,9 @@ section.first-section {
   left: 50%;
   width: 80%;
   height: 210px;
+  z-index: 1;
   background-color: var(--brand-beige);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -100%);
 }
 
 .statistic-container .number-and-description {
@@ -244,11 +324,21 @@ section.first-section {
   color: var(--brand-green);
 }
 
+.rectangular {
+  position: absolute;
+  transform: translate(0%, -100%);
+  width: 100%;
+  height: 105px;
+  background: var(--brand-green-light-02);
+}
 
-/* Second Container */
+
+/* Second Container - Tratamentos */
 
 .second-section {
   background-color: var(--brand-green-light-02);
+  height: 100vh;
+  width: 100%;
 }
 
 .second-section .second-container {
@@ -261,7 +351,7 @@ section.first-section {
 .second-container .services-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   width: 80%;
 }
@@ -272,7 +362,8 @@ section.first-section {
 }
 
 .second-container h2 {
-  font-size: 4rem;
+  font-size: 4.5rem;
+  text-align: center;
   color: var(--grey-head-line);
 }
 
@@ -289,14 +380,24 @@ section.first-section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 90%;
-  height: 85%;
-  padding: 40px;
+  width: 347px;
+  height: 207px;
+  padding: 0px 20px 0px 20px;
+  margin: 20px;
+  border: 1px solid var(--brand-green-light );
+  border-radius: 5px;
   background-color: var(--white);
 }
 
+.solution-child .solution-correct-emoji {
+  width: 24px;
+  padding-bottom: 10px;
+  height: auto;
+}
+
 .solution-child .solution-title {
-  font-size: 2.5rem;
+  padding-bottom: 10px;
+  font-size: 3rem;
   color: var(--grey-head-line);
 }
 
@@ -305,3 +406,51 @@ section.first-section {
   color: #495057;
   color: var(--grey-paragraph);
 }
+
+
+/* Third Section - About Us*/
+
+.third-section {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--brand-beige);
+}
+
+.third-section .third-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 90%;
+  height: auto;
+}
+
+.div-who-we-are-text img {
+  width: 480px;
+  height: 414px;
+}
+
+.third-container .div-who-we-are-text {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+
+.div-who-we-are-text h3 {
+  font-size: 2rem;
+  padding-bottom: 15px;
+  color: var(--brand-green);
+}
+
+.div-who-we-are-text h2 {
+  font-size: 4rem;
+  padding-bottom: 20px;
+  color: var(--grey-head-line);
+}
+
+.div-who-we-are-text p {
+  font-size: 1.8rem;
+  color: var(--grey-head-line);
+}
+
+

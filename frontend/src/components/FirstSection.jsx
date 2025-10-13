@@ -1,9 +1,11 @@
 import fotoDeise from "../assets/foto-deise.png"
+import NavIntro from "./NavIntro";
 
 function FirstSection() {
 
     return (
         <section id="first-section" className="first-section">
+            <NavIntro />
             <div className="first-container">
                 <div className="intro">
                     <h2 className="welcome-text">

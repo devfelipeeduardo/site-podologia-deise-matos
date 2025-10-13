@@ -1,3 +1,5 @@
+import correctIcon from "../assets/correct.png"
+
 function FirstSection() {
 
     return (
@@ -11,34 +13,29 @@ function FirstSection() {
                     </h2>
                     <div className="solutions">
                         <div className="solution-child">
-                            {/* <img className="solution-correct-emoji" src="" alt="OK IMAGE" /> */}
+                            <img className="solution-correct-emoji" src={correctIcon} alt="OK IMAGE" />
                             <h4 className="solution-title">Unha Encravada</h4>
-                            <p className="solution-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, numquam quidem eos quas quos, illo libero perferendis earum sequi ullam aspernatur. Facere a, asperiores at eum perspiciatis veritatis tenetur maxime.</p>
+                            <p className="solution-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, numquam quidem eos quas quos, illo.</p>
                         </div> {/* *4 */}
                         <div className="solution-child">
-                            {/* <img className="solution-correct-emoji" src="" alt="OK IMAGE" /> */}
-                            <h4 className="solution-title">Unha Encravada</h4>
-                            <p className="solution-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, numquam quidem eos quas quos, illo libero perferendis earum sequi ullam aspernatur. Facere a, asperiores at eum perspiciatis veritatis tenetur maxime.</p>
+                            <img className="solution-correct-emoji" src={correctIcon} alt="OK IMAGE" />                            <h4 className="solution-title">Unha Encravada</h4>
+                            <p className="solution-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, numquam quidem eos quas quos, illo.</p>
                         </div> {/* *4 */}
                         <div className="solution-child">
-                            {/* <img className="solution-correct-emoji" src="" alt="OK IMAGE" /> */}
-                            <h4 className="solution-title">Unha Encravada</h4>
-                            <p className="solution-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, numquam quidem eos quas quos, illo libero perferendis earum sequi ullam aspernatur. Facere a, asperiores at eum perspiciatis veritatis tenetur maxime.</p>
+                            <img className="solution-correct-emoji" src={correctIcon} alt="OK IMAGE" />                            <h4 className="solution-title">Unha Encravada</h4>
+                            <p className="solution-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, numquam quidem eos quas quos, illo.</p>
                         </div> {/* *4 */}
                         <div className="solution-child">
-                            {/* <img className="solution-correct-emoji" src="" alt="OK IMAGE" /> */}
-                            <h4 className="solution-title">Unha Encravada</h4>
-                            <p className="solution-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, numquam quidem eos quas quos, illo libero perferendis earum sequi ullam aspernatur. Facere a, asperiores at eum perspiciatis veritatis tenetur maxime.</p>
+                            <img className="solution-correct-emoji" src={correctIcon} alt="OK IMAGE" />                            <h4 className="solution-title">Unha Encravada</h4>
+                            <p className="solution-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, numquam quidem eos quas quos, illo.</p>
                         </div> {/* *4 */}
                         <div className="solution-child">
-                            {/* <img className="solution-correct-emoji" src="" alt="OK IMAGE" /> */}
-                            <h4 className="solution-title">Unha Encravada</h4>
-                            <p className="solution-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, numquam quidem eos quas quos, illo libero perferendis earum sequi ullam aspernatur. Facere a, asperiores at eum perspiciatis veritatis tenetur maxime.</p>
+                            <img className="solution-correct-emoji" src={correctIcon} alt="OK IMAGE" />                            <h4 className="solution-title">Unha Encravada</h4>
+                            <p className="solution-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, numquam quidem eos quas quos, illo.</p>
                         </div> {/* *4 */}
                         <div className="solution-child">
-                            <img className="solution-correct-emoji" src="" alt="OK IMAGE" />
-                            <h4 className="solution-title">Unha Encravada</h4>
-                            <p className="solution-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, numquam quidem eos quas quos, illo libero perferendis earum sequi ullam aspernatur. Facere a, asperiores at eum perspiciatis veritatis tenetur maxime.</p>
+                            <img className="solution-correct-emoji" src={correctIcon} alt="OK IMAGE" />                            <h4 className="solution-title">Unha Encravada</h4>
+                            <p className="solution-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, numquam quidem eos quas quos, illo..</p>
                         </div> {/* *4 */}
                     </div>
                 </div>

@@ -1,11 +1,30 @@
+import { useEffect, useState } from "react";
 import logo from "../assets/logo-deise-matos.png"
 
 function Nav() {
 
+    const [hidden, setHidden] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 100) {
+                setHidden(true);
+            } else {
+                setHidden(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
-        <nav>
+        <nav id="suspense-nav" className={`nav ${hidden ? "nav-hidden" : ""}`}>
             <a href="" className="nav-logo">
-                <img src={logo} alt="" className="nav-logo" />
+                <img src={logo} href="#first-section" alt="logo-podologia-deise-matos" className="nav-logo" />
             </a>
             <li className="nav-menu">
                 <a href="#first-section" className="nav-menu-option"><ul>Início</ul></a>
