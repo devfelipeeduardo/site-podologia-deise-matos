@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/logo-deise-matos.png"
 
-function Nav( { scheduleAppointmentRedirect }) {
+function Nav( { onScheduleAppointmentRedirect }) {
 
     const [hidden, setHidden] = useState(false);
     useEffect(() => {
@@ -31,7 +31,7 @@ function Nav( { scheduleAppointmentRedirect }) {
                 <a href="#third-section" className="nav-menu-option"><ul>Serviços</ul></a>
                 <a href="#fourth-section" className="nav-menu-option"><ul>Depoimentos</ul></a>
             </li>
-            <button onClick={scheduleAppointmentRedirect} className="nav-button-schedule">
+            <button onClick={onScheduleAppointmentRedirect} className="nav-button-schedule">
                 AGENDAR CONSULTA
             </button>
         </nav>
