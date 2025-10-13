@@ -5,7 +5,7 @@ function FirstSection( { onScheduleAppointmentRedirect }) {
 
     return (
         <section id="first-section" className="first-section">
-            <NavIntro />
+            <NavIntro onScheduleAppointmentRedirect={onScheduleAppointmentRedirect} />
             <div className="first-container">
                 <div className="intro">
                     <h2 className="welcome-text">
