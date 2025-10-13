@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/logo-deise-matos.png"
 
-function Nav( { scheduleAppointmentRedirect=ScheduleAppointmentRedirect }) {
+function Nav( { scheduleAppointmentRedirect }) {
 
     const [hidden, setHidden] = useState(false);
     useEffect(() => {
