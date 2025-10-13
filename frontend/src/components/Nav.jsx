@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/logo-deise-matos.png"
 
-function Nav() {
+function Nav( { scheduleAppointmentRedirect=ScheduleAppointmentRedirect }) {
 
     const [hidden, setHidden] = useState(false);
-
-    function ScheduleAppointmentRedirect() {window.location.href = "https://api.whatsapp.com/send/?phone=5511975126282&text&type=phone_number&app_absent=0"};
-    
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 100) {
@@ -34,7 +31,7 @@ function Nav() {
                 <a href="#third-section" className="nav-menu-option"><ul>Serviços</ul></a>
                 <a href="#fourth-section" className="nav-menu-option"><ul>Depoimentos</ul></a>
             </li>
-            <button onClick={ScheduleAppointmentRedirect} className="nav-button-schedule">
+            <button onClick={scheduleAppointmentRedirect} className="nav-button-schedule">
                 AGENDAR CONSULTA
             </button>
         </nav>
