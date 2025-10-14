@@ -1,16 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
-:root {
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #bbbbbb;
-
-  font-family: "DM Sans", sans-serif;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-}
-
 /* Colors */
+
 :root {
   --brand-green: #00856F;
   --brand-green-light: #DCE9E2;
@@ -20,6 +11,18 @@
 
   --grey-head-line: #212529;
   --grey-paragraph: #495057;
+}
+
+/* Global */
+
+:root {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #bbbbbb;
+
+  font-family: "DM Sans", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
 }
 
 *,
@@ -94,7 +97,6 @@ nav .nav-menu a {
 nav .nav-menu a:last-child {
   margin-left: 40px;
 }
-
 
 nav .nav-menu a:hover {
   font-weight: bold;
@@ -276,7 +278,7 @@ section.first-section {
 }
 
 .intro h1 {
-  font-size: 6rem;
+  font-size: 5rem;
   color: var(--grey-head-line);
 }
 
@@ -331,7 +333,6 @@ section.first-section {
   height: 105px;
   background: var(--brand-green-light-02);
 }
-
 
 /* Second Container - Tratamentos */
 
@@ -435,7 +436,6 @@ section.first-section {
   width: 40%;
 }
 
-
 .div-who-we-are-text h3 {
   font-size: 2rem;
   padding-bottom: 15px;
@@ -452,7 +452,6 @@ section.first-section {
   font-size: 1.8rem;
   color: var(--grey-head-line);
 }
-
 
 /* Fourth Section */
 
