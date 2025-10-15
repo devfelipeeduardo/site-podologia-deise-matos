@@ -50,16 +50,20 @@ a {
 
 /* Nav */
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
+.nav-base {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   height: 70px;
+}
+
+.suspense-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   opacity: 0;
   background-color: var(--brand-green);
   transition: opacity 1s ease-in-out;
@@ -79,8 +83,8 @@ nav .nav-logo {
 
 nav li.nav-menu {
   display: flex;
-  width: 600px;
   flex-direction: row;
+  width: 600px;
   padding: 10px;
 }
 
@@ -126,71 +130,33 @@ nav .nav-button-schedule:hover {
 /* Alerta de Gambiarra!*/
 /* NavIntro */
 
-.nav-intro {
+.nav-fixed {
   position: absolute;
   top: 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 70px;
   background-color: transparent;
   z-index: 10001;
 }
 
-.nav-intro .nav-logo {
-  width: auto;
-  height: 40px;
-  margin-left: 40px;
-  cursor: pointer;
-}
-
-.nav-intro li.nav-menu {
-  display: flex;
-  width: 600px;
-  flex-direction: row;
-  padding: 10px;
-}
-
-.nav-intro .nav-menu a {
-  width: 110px;
-  margin-left: 20px;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: normal;
+.nav-fixed .nav-menu a {
   color: var(--brand-green);
-  transition: all 200ms ease;
 }
 
-.nav-intro .nav-menu a:last-child {
-  margin-left: 40px;
-}
-
-
-.nav-intro .nav-menu a:hover {
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.nav-intro .nav-button-schedule {
-  width: 200px;
-  height: 40px;
-  margin-right: 50px;
+.nav-fixed .nav-button-schedule {
   border: 1px solid var(--brand-green);
-  border-radius: 50px;
-  font-weight: bold;
-  background-color: transparent;
   color: var(--brand-green);
-  cursor: pointer;
-  transition: all 200ms ease;
 }
 
-.nav-intro .nav-button-schedule:hover {
-  border: 1px solid transparent;
+.nav-fixed .nav-button-schedule:hover {
   background-color: var(--brand-green);
   color: var(--brand-green-light);
-  font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 /* First Container - Intro*/
@@ -212,6 +178,7 @@ section {
 .first-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 80%;
   height: 80vh;
 }
@@ -224,6 +191,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  flex-wrap: wrap;
   width: 60%;
   height: 65%;
 }
@@ -231,12 +199,12 @@ section {
 /* IntroDiv */
 
 .first-container-button-schedule {
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 260px;
   height: 50px;
   padding: 20px;
-  display: flex;
   border: 1px solid transparent;
   border-radius: 50px;
   font-weight: bold;
@@ -511,7 +479,7 @@ footer {
   height: 268px;
 }
 
-footer .deise-logo{
+footer .deise-logo {
   width: auto;
   height: 60px;
   padding-bottom: 10px;
@@ -552,69 +520,50 @@ footer .social-medias-container .fb-icon {
   padding-right: 100px;
 }
 
-/* Media Queries - O site foi feito Desktop First */ 
+/* Media Queries - O site foi feito Desktop First */
 
-@media (max-width: 576px) {
-  
+@media (max-width: 768px) {
+
+  /* Nav */
+
+  .nav-menu-container {
+    display: none;
+  }
+
   nav {
-    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: white;
   }
 
-  .nav-intro {
+  nav .nav-button-schedule {
     display: none;
+  }
+  
+  .nav-menu-container.open {
+    display: block;
   }
 
-  .image-container {
-    display: none;
+  nav li.nav-menu {
+    display: flex;
+    flex-direction: column;
   }
+
+  /* First Container */
 
   .first-container {
     flex-direction: column;
-    align-items: center;
   }
-
-  .first-container .intro {
-    align-items: center;
-  }
-
-  .first-container .intro h1 {
-    font-size: 3rem;
-  }
-
-  .first-container .intro-paragraph {
-    font-size: 1rem;
-  }
-
-  .statistic-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-  }
-
-  .second-container .solutions {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-  }
-
-  .third-container img {
+  
+  .first-container .image-container{
     display: none;
   }
 
-  .fourth-container .tell-us-image {
-    display: none;
+  .menu-toggle {
+    display: block; /* mostra o botão */
   }
-
-  footer .center-container {
-    flex-direction: column-reverse;
-    width: 100%;
-    align-items: center;
-  }
-
-  footer .center-container .social-medias-container {
-    width: 40%;
-  }
-
-  footer .social-medias-container .fb-icon {
-    padding-right: 30px;
-  }
-
 }

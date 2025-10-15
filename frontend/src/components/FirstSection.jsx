@@ -1,11 +1,15 @@
 import fotoDeise from "../assets/foto-deise.png"
-import NavIntro from "./NavIntro";
+import Nav from "./Nav";
 
-function FirstSection( { onScheduleAppointmentRedirect }) {
+function FirstSection({ onScheduleAppointmentRedirect, isOpen, toggleMenu}) {
 
     return (
         <section id="first-section" className="first-section">
-            <NavIntro onScheduleAppointmentRedirect={onScheduleAppointmentRedirect} />
+            <Nav
+                onScheduleAppointmentRedirect={onScheduleAppointmentRedirect}
+                isOpen={isOpen}
+                toggleMenu={toggleMenu}
+            />
             <div className="first-container">
                 <div className="intro">
                     <h2 className="welcome-text">
@@ -13,7 +17,7 @@ function FirstSection( { onScheduleAppointmentRedirect }) {
                     </h2>
                     <h1>
                         Podologia de Qualidade
-                        <br/>
+                        <br />
                         Simplificada para Todos
                     </h1>
                     <p className="intro-paragraph">

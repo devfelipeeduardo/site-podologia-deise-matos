@@ -1,12 +1,30 @@
+import { useEffect, useState } from "react";
+import logo from "../assets/logo-deise-matos.png"
 
-import logoGreen from "../assets/logo-deise-matos-green.png"
+function SuspenseNav({ onScheduleAppointmentRedirect, isOpen, toggleMenu }) {
 
-function Nav({ onScheduleAppointmentRedirect, isOpen, toggleMenu}) {
+    const [hidden, setHidden] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 100) {
+                setHidden(true);
+            } else {
+                setHidden(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
-        <nav className="nav-base nav-fixed">
+        <nav id="suspense-nav" className={`suspense-nav nav-base ${hidden ? "nav-hidden" : ""}`}>
             <a href="" className="nav-logo">
-                <img src={logoGreen} href="#first-section" alt="logo-podologia-deise-matos" className="nav-logo" />
+                <img src={logo} href="#first-section" alt="logo-podologia-deise-matos" className="nav-logo" />
             </a>
             <div className={`nav-menu-container ${isOpen ? "open" : ""}`}>
                 <li className="nav-menu">
@@ -22,9 +40,8 @@ function Nav({ onScheduleAppointmentRedirect, isOpen, toggleMenu}) {
             <button className="menu-toggle" aria-label="Abrir menu" onClick={toggleMenu} >
                 ☰
             </button>
-        </nav>
+        </nav >
     )
 
 }
-
-export default Nav;
+export default SuspenseNav;
