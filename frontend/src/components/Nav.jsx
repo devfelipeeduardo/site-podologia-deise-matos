@@ -24,7 +24,7 @@ function Nav({ onScheduleAppointmentRedirect, isOpen, toggleMenu}) {
             </button>
         </nav>
     )
-
+ 
 }
 
 export default Nav;
