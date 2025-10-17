@@ -543,13 +543,6 @@ footer .social-medias-container .fb-icon {
   .nav-menu-container {
     display: none;
   }
-
-  .nav-base {
-    background-color: white;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-  }
   
   nav {
     position: fixed;
@@ -577,7 +570,7 @@ footer .social-medias-container .fb-icon {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    /* height: 100%; */
   }
 
   /* First Container */
