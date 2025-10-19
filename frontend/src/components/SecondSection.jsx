@@ -1,6 +1,6 @@
 import correctIcon from "../assets/correct.png"
 
-function FirstSection() {
+function SecondSection() {
 
     return (
         <section id="second-section" className="second-section">
@@ -44,4 +44,4 @@ function FirstSection() {
     )
 }
 
-export default FirstSection;
+export default SecondSection;

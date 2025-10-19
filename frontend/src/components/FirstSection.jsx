@@ -1,7 +1,7 @@
 import fotoDeise from "../assets/foto-deise.png"
 import Nav from "./Nav";
 
-function FirstSection({ onScheduleAppointmentRedirect, isOpen, toggleMenu}) {
+function FirstSection({ onScheduleAppointmentRedirect, isOpen, toggleMenu }) {
 
     return (
         <section id="first-section" className="first-section">

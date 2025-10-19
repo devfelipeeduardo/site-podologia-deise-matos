@@ -1,7 +1,7 @@
 
 import logoGreen from "../assets/logo-deise-matos-green.png"
 
-function Nav({ onScheduleAppointmentRedirect, isOpen, toggleMenu}) {
+function Nav({ onScheduleAppointmentRedirect, isOpen, toggleMenu }) {
 
     return (
         <nav className="nav-base nav-fixed">
@@ -9,12 +9,12 @@ function Nav({ onScheduleAppointmentRedirect, isOpen, toggleMenu}) {
                 <img src={logoGreen} href="#first-section" alt="logo-podologia-deise-matos" className="nav-logo" />
             </a>
             <div className={`nav-menu-container ${isOpen ? "open" : ""}`}>
-                <li className="nav-menu">
-                    <a href="#first-section" className="nav-menu-option"><ul>Início</ul></a>
-                    <a href="#second-section" className="nav-menu-option"><ul>Sobre</ul></a>
-                    <a href="#third-section" className="nav-menu-option"><ul>Serviços</ul></a>
-                    <a href="#fourth-section" className="nav-menu-option"><ul>Contato</ul></a>
-                </li>
+                <ul className="nav-menu">
+                    <a href="#first-section" className="nav-menu-option" onClick={toggleMenu}><li>Início</li></a>
+                    <a href="#second-section" className="nav-menu-option" onClick={toggleMenu}><li>Sobre</li></a>
+                    <a href="#third-section" className="nav-menu-option" onClick={toggleMenu}><li>Serviços</li></a>
+                    <a href="#fourth-section" className="nav-menu-option" onClick={toggleMenu}><li>Contato</li></a>
+                </ul>
             </div>
             <button onClick={onScheduleAppointmentRedirect} className="nav-button-schedule">
                 AGENDAR CONSULTA
@@ -24,7 +24,7 @@ function Nav({ onScheduleAppointmentRedirect, isOpen, toggleMenu}) {
             </button>
         </nav>
     )
- 
+
 }
 
 export default Nav;

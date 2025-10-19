@@ -27,7 +27,12 @@ function App() {
 
   return (
     <>
-      <SuspenseNav onScheduleAppointmentRedirect={onScheduleAppointmentRedirect} />
+      <SuspenseNav
+        onScheduleAppointmentRedirect={onScheduleAppointmentRedirect}
+        isOpen={isOpen}
+        toggleMenu={toggleMenu}
+      />
+
       <FirstSection
         onScheduleAppointmentRedirect={onScheduleAppointmentRedirect}
         isOpen={isOpen}
