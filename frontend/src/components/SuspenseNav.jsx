@@ -37,7 +37,7 @@ function SuspenseNav({ onScheduleAppointmentRedirect, isOpen, toggleMenu }) {
             <button onClick={onScheduleAppointmentRedirect} className="nav-button-schedule">
                 AGENDAR CONSULTA
             </button>
-            <button className="menu-toggle" aria-label="Abrir menu" onClick={toggleMenu} >
+            <button className="menu-toggle brand-green-light" aria-label="Abrir menu" onClick={toggleMenu} >
                 ☰
             </button>
         </nav >

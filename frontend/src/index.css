@@ -600,13 +600,13 @@ footer .social-medias-container .fb-icon {
     cursor: pointer;
     z-index: 10001;
   }
-  
-  .suspense-nav .menu-toggle {
+
+  .brand-green-light {
     color: var(--brand-green-light);
   }
   
 
-  .nav-fixed .menu-toggle {
+  .brand-green {
     color: var(--brand-green);
   }
 
