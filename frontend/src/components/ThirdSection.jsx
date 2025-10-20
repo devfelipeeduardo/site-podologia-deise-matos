@@ -9,7 +9,14 @@ function ThirdSection() {
                 <div className="div-who-we-are-text">
                     <h3>SOBRE NÓS</h3>
                     <h2>Entenda quem somos e porquê existimos</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, reiciendis quis. Unde magnam facere quam saepe aut placeat fugit laboriosam. Ad qui doloremque beatae nobis, provident illo deleniti eius porro?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, officia aliquam repellat dolorem minus autem distinctio, commodi deserunt cumque vero dicta veniam dolorum, iste iure! Amet excepturi sunt inventore iusto.</p>
+                    <p>
+                        Com 18 anos de experiência, construímos uma história marcada por cuidado, ética e excelência.
+                        Nossa missão é oferecer um atendimento personalizado, com atenção aos detalhes e dedicação a cada cliente.
+                        Acreditamos que cada pessoa é única e merece confiança, bem-estar e resultados de qualidade.
+                        <br/>
+                        ✨ Missão: cuidar com empatia e profissionalismo.
+                        <br/>
+                        💚 Valores: respeito, ética, confiança, qualidade e amor pelo que fazemos.                    </p>
                 </div>
             </div>
         </section>

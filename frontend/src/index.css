@@ -597,11 +597,18 @@ footer .social-medias-container .fb-icon {
     font-size: 3rem;
     background: none;
     border: none;
-    color: var(--dark-blue);
     cursor: pointer;
     z-index: 10001;
   }
+  
+  .suspense-nav .menu-toggle {
+    color: var(--brand-green-light);
+  }
+  
 
+  .nav-fixed .menu-toggle {
+    color: var(--brand-green);
+  }
 
   nav ul.nav-menu {
     display: flex;
