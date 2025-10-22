@@ -1,50 +1,25 @@
-import { useState } from "react"
-import SuspenseNav from "./components/SuspenseNav"
-import FirstSection from "./components/FirstSection"
-import SecondSection from "./components/SecondSection"
-import ThirdSection from "./components/ThirdSection"
-import FourthSection from "./components/FourthSection"
-import Footer from "./components/Footer"
-import StatisticContainer from "./components/StatistiscContainer"
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header/Header.jsx';
+import Home from "./pages/Home/Home.jsx";
+import Sobre from "./pages/Sobre/Sobre.jsx";
+import Servicos from "./pages/Servicos/Servicos.jsx";
+import Contato from "./pages/Contato/Contato.jsx";
 
 function App() {
 
-  const [isOpen, setIsOpen] = useState(false);
-
-  function toggleMenu() {
-    setIsOpen(!isOpen);
-  }
-
-  function onScheduleAppointmentRedirect() {
-    window.open(
-      "https://api.whatsapp.com/send/?phone=5511975126282&text&type=phone_number&app_absent=0",
-      "_blank",
-      "noopener,noreferrer"
-    );
-  };
-
-
-
   return (
     <>
-      <SuspenseNav
-        onScheduleAppointmentRedirect={onScheduleAppointmentRedirect}
-        isOpen={isOpen}
-        toggleMenu={toggleMenu}
-      />
+      <Header />
 
-      <FirstSection
-        onScheduleAppointmentRedirect={onScheduleAppointmentRedirect}
-        isOpen={isOpen}
-        toggleMenu={toggleMenu}
-      />
-      <StatisticContainer />
-      <SecondSection />
-      <ThirdSection />
-      <FourthSection onScheduleAppointmentRedirect={onScheduleAppointmentRedirect} />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sobre" element={<Sobre />} />
+        <Route path="/servicos" element={<Servicos />} />
+        <Route path="/contato" element={<Contato />} />
+      </Routes>
     </>
   )
 }
 
-export default App;
+export default App
